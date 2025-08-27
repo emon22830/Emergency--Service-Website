@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emergency Service</title>
+
+    <!-- Daisy UI -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+
+<body class="bg-gray-50">
+    <header class="mx-auto">
+        <!-- NavBar -->
+        <nav class="flex justify-between items-center py-4 px-10 bg-white">
+            <div class="flex items-center gap-2">
+                <div
+                    class="w-[50px] h-[50px] bg-green-600 rounded-full flex items-center justify-center text-white font-bold text-xl">
+                    ES
+                </div>
+                <h1 class="text-lg leading-tight font-bold text-green-800">Emergency<br>Service</h1>
+            </div>
+            <!-- Navbar Menu-->
+            <div class="flex items-center gap-12">
+                <div class="bg-[#41ff6b] flex items-center gap-1 text-gray-700 rounded-lg px-3 py-1">
+                    <span class="font-medium" id="loveCount">0</span>
+                    <i class="fa-solid fa-heart text-red-500"></i>
+                </div>
+                <div class="bg-[#41ff6b] flex items-center gap-1 text-gray-700 rounded-lg px-3 py-1">
+                    <span class="font-medium" id="coinCount">100</span>
+                    <i class="fa-solid fa-coins text-yellow-500"></i>
+                </div>
+                <button class="bg-green-500 text-white px-4 py-2 rounded-lg font-medium hover:bg-green-600 transition">
+                    <span id="copyCount">0</span> Copy
+                </button>
+            </div>
+        </nav>
+
+        <!-- Banner -->
+        <div class="bg-gradient-to-r from-green-900 to-green-700 text-white text-center py-8">
+            <div class="w-20 h-20 bg-white rounded-full mx-auto mb-3 flex items-center justify-center">
+                <div class="w-16 h-16 bg-green-700 rounded-full flex items-center justify-center text-white font-bold">
+                    BD
+                </div>
+            </div>
+            <h1 class="text-2xl font-bold">Emergency Service Directory</h1>
+            <p class="mt-1 text-sm max-w-2xl mx-auto">
+                Government Emergency Services at Your Fingertip – A Project by Government of the People's Republic of
+                Bangladesh
+            </p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex max-w-7xl mx-auto py-8 px-6 gap-6">
+        <!-- Cards Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 flex-1">
+            <!-- Emergency Card Template -->
+            <div
+                class="bg-white rounded-lg p-6 flex flex-col items-center shadow-sm hover:shadow-md transition relative">
+                <button class="absolute top-4 right-4 text-gray-400 hover:text-red-500 transition love-btn">
+                    <i class="fa-regular fa-heart"></i>
+                </button>
+                <div class="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mb-3">
+                    <i class="fa-solid fa-fire text-red-500 text-xl"></i>
+                </div>
+                <h3 class="font-bold text-lg text-center">Fire Service Number</h3>
+                <p class="text-gray-500 text-sm mb-3">Fire Service</p>
+                <p class="text-4xl font-bold text-red-600 mb-4">999</p>
+                <div class="flex gap-2 w-full">
+                    <button
+                        class="flex-1 border border-gray-300 px-3 py-2 rounded-lg text-sm hover:bg-gray-50 transition flex items-center justify-center gap-1 copy-btn">
+                        <i class="fa-regular fa-copy"></i> Copy
+                    </button>
+                    <button
+                        class="flex-1 bg-green-500 text-white px-3 py-2 rounded-lg text-sm hover:bg-green-600 transition flex items-center justify-center gap-1 call-btn">
+                        <i class="fa-solid fa-phone"></i> Call
+                    </button>
+                </div>
+            </div>
+
+            <!-- Police Card -->
+            <div
+                class="bg-white rounded-lg p-6 flex flex-col items-center shadow-sm hover:shadow-md transition relative">
+                <button class="absolute top-4 right-4 text-gray-400 hover:text-red-500 transition love-btn">
+                    <i class="fa-regular fa-heart"></i>
+                </button>
+                <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-3">
+                    <i class="fa-solid fa-shield-halved text-blue-500 text-xl"></i>
+                </div>
+                <h3 class="font-bold text-lg text-center">Police</h3>
+                <p class="text-gray-500 text-sm mb-3">National Emergency Number</p>
+                <p class="text-4xl font-bold text-blue-600 mb-4">999</p>
+                <div class="flex gap-2 w-full">
+                    <button
+                        class="flex-1 border border-gray-300 px-3 py-2 rounded-lg text-sm hover:bg-gray-50 transition flex items-center justify-center gap-1 copy-btn">
+                        <i class="fa-regular fa-copy"></i> Copy
+                    </button>
+                    <button
+                        class="flex-1 bg-green-500 text-white px-3 py-2 rounded-lg text-sm hover:bg-green-600 transition flex items-center justify-center gap-1 call-btn">
+                        <i class="fa-solid fa-phone"></i> Call
+                    </button>
+                </div>
+            </div>
+
+            <!-- Ambulance Card -->
+            <div
+                class="bg-white rounded-lg p-6 flex flex-col items-center shadow-sm hover:shadow-md transition relative">
+                <button class="absolute top-4 right-4 text-gray-400 hover:text-red-500 transition love-btn">
+                    <i class="fa-regular fa-heart"></i>
+                </button>
+                <div class="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mb-3">
+                    <i class="fa-solid fa-truck-medical text-red-500 text-xl"></i>
+                </div>
+                <h3 class="font-bold text-lg text-center">Ambulance</h3>
+                <p class="text-gray-500 text-sm mb-3">Medical Emergency</p>
+                <p class="text-4xl font-bold text-red-600 mb-4">199</p>
+                <div class="flex gap-2 w-full">
+                    <button
+                        class="flex-1 border border-gray-300 px-3 py-2 rounded-lg text-sm hover:bg-gray-50 transition flex items-center justify-center gap-1 copy-btn">
+                        <i class="fa-regular fa-copy"></i> Copy
+                    </button>
+                    <button
+                        class="flex-1 bg-green-500 text-white px-3 py-2 rounded-lg text-sm hover:bg-green-600 transition flex items-center justify-center gap-1 call-btn">
+                        <i class="fa-solid fa-phone"></i> Call
+                    </button>
+                </div>
+            </div>
+
+            <!-- Water & Sewerage Card -->
+            <div
+                class="bg-white rounded-lg p-6 flex flex-col items-center shadow-sm hover:shadow-md transition relative">
+                <button class="absolute top-4 right-4 text-gray-400 hover:text-red-500 transition love-btn">
+                    <i class="fa-regular fa-heart"></i>
+                </button>
+                <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-3">
+                    <i class="fa-solid fa-droplet text-blue-500 text-xl"></i>
+                </div>
+                <h3 class="font-bold text-lg text-center">Water & Sewerage</h3>
+                <p class="text-gray-500 text-sm mb-3">WASA</p>
+                <p class="text-4xl font-bold text-blue-600 mb-4">16162</p>
+                <div class="flex gap-2 w-full">
+                    <button
+                        class="flex-1 border border-gray-300 px-3 py-2 rounded-lg text-sm hover:bg-gray-50 transition flex items-center justify-center gap-1 copy-btn">
+                        <i class="fa-regular fa-copy"></i> Copy
+                    </button>
+                    <button
+                        class="flex-1 bg-green-500 text-white px-3 py-2 rounded-lg text-sm hover:bg-green-600 transition flex items-center justify-center gap-1 call-btn">
+                        <i class="fa-solid fa-phone"></i> Call
+                    </button>
+                </div>
+            </div>
+
+            <!-- Gas Emergency Card -->
+            <div
+                class="bg-white rounded-lg p-6 flex flex-col items-center shadow-sm hover:shadow-md transition relative">
+                <button class="absolute top-4 right-4 text-gray-400 hover:text-red-500 transition love-btn">
+                    <i class="fa-regular fa-heart"></i>
+                </button>
+                <div class="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mb-3">
+                    <i class="fa-solid fa-fire-flame-curved text-orange-500 text-xl"></i>
+                </div>
+                <h3 class="font-bold text-lg text-center">Gas Emergency</h3>
+                <p class="text-gray-500 text-sm mb-3">Titas Gas</p>
+                <p class="text-4xl font-bold text-orange-600 mb-4">16496</p>
+                <div class="flex gap-2 w-full">
+                    <button
+                        class="flex-1 border border-gray-300 px-3 py-2 rounded-lg text-sm hover:bg-gray-50 transition flex items-center justify-center gap-1 copy-btn">
+                        <i class="fa-regular fa-copy"></i> Copy
+                    </button>
+                    <button
+                        class="flex-1 bg-green-500 text-white px-3 py-2 rounded-lg text-sm hover:bg-green-600 transition flex items-center justify-center gap-1 call-btn">
+                        <i class="fa-solid fa-phone"></i> Call
+                    </button>
+                </div>
+            </div>
+
+            <!-- Electricity Card -->
+            <div
+                class="bg-white rounded-lg p-6 flex flex-col items-center shadow-sm hover:shadow-md transition relative">
+                <button class="absolute top-4 right-4 text-gray-400 hover:text-red-500 transition love-btn">
+                    <i class="fa-regular fa-heart"></i>
+                </button>
+                <div class="w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center mb-3">
+                    <i class="fa-solid fa-bolt text-yellow-500 text-xl"></i>
+                </div>
+                <h3 class="font-bold text-lg text-center">Electricity</h3>
+                <p class="text-gray-500 text-sm mb-3">DESCO</p>
+                <p class="text-4xl font-bold text-yellow-600 mb-4">19123</p>
+                <div class="flex gap-2 w-full">
+                    <button
+                        class="flex-1 border border-gray-300 px-3 py-2 rounded-lg text-sm hover:bg-gray-50 transition flex items-center justify-center gap-1 copy-btn">
+                        <i class="fa-regular fa-copy"></i> Copy
+                    </button>
+                    <button
+                        class="flex-1 bg-green-500 text-white px-3 py-2 rounded-lg text-sm hover:bg-green-600 transition flex items-center justify-center gap-1 call-btn">
+                        <i class="fa-solid fa-phone"></i> Call
+                    </button>
+                </div>
+            </div>
+
+            <!-- Railway Card -->
+            <div
+                class="bg-white rounded-lg p-6 flex flex-col items-center shadow-sm hover:shadow-md transition relative">
+                <button class="absolute top-4 right-4 text-gray-400 hover:text-red-500 transition love-btn">
+                    <i class="fa-regular fa-heart"></i>
+                </button>
+                <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mb-3">
+                    <i class="fa-solid fa-train text-purple-500 text-xl"></i>
+                </div>
+                <h3 class="font-bold text-lg text-center">Bangladesh Railway</h3>
+                <p class="text-gray-500 text-sm mb-3">Railway Helpline</p>
+                <p class="text-4xl font-bold text-purple-600 mb-4">131</p>
+                <div class="flex gap-2 w-full">
+                    <button
+                        class="flex-1 border border-gray-300 px-3 py-2 rounded-lg text-sm hover:bg-gray-50 transition flex items-center justify-center gap-1 copy-btn">
+                        <i class="fa-regular fa-copy"></i> Copy
+                    </button>
+                    <button
+                        class="flex-1 bg-green-500 text-white px-3 py-2 rounded-lg text-sm hover:bg-green-600 transition flex items-center justify-center gap-1 call-btn">
+                        <i class="fa-solid fa-phone"></i> Call
+                    </button>
+                </div>
+            </div>
+
+            <!-- Anti-Corruption Card -->
+            <div
+                class="bg-white rounded-lg p-6 flex flex-col items-center shadow-sm hover:shadow-md transition relative">
+                <button class="absolute top-4 right-4 text-gray-400 hover:text-red-500 transition love-btn">
+                    <i class="fa-regular fa-heart"></i>
+                </button>
+                <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mb-3">
+                    <i class="fa-solid fa-scale-balanced text-green-500 text-xl"></i>
+                </div>
+                <h3 class="font-bold text-lg text-center">Anti-Corruption Helpline</h3>
+                <p class="text-gray-500 text-sm mb-3">ACC Helpline</p>
+                <p class="text-4xl font-bold text-green-600 mb-4">106</p>
+                <div class="flex gap-2 w-full">
+                    <button
+                        class="flex-1 border border-gray-300 px-3 py-2 rounded-lg text-sm hover:bg-gray-50 transition flex items-center justify-center gap-1 copy-btn">
+                        <i class="fa-regular fa-copy"></i> Copy
+                    </button>
+                    <button
+                        class="flex-1 bg-green-500 text-white px-3 py-2 rounded-lg text-sm hover:bg-green-600 transition flex items-center justify-center gap-1 call-btn">
+                        <i class="fa-solid fa-phone"></i> Call
+                    </button>
+                </div>
+            </div>
+
+            <!-- Women & Children Helpline -->
+            <div
+                class="bg-white rounded-lg p-6 flex flex-col items-center shadow-sm hover:shadow-md transition relative">
+                <button class="absolute top-4 right-4 text-gray-400 hover:text-red-500 transition love-btn">
+                    <i class="fa-regular fa-heart"></i>
+                </button>
+                <div class="w-12 h-12 bg-pink-100 rounded-full flex items-center justify-center mb-3">
+                    <i class="fa-solid fa-heart text-pink-500 text-xl"></i>
+                </div>
+                <h3 class="font-bold text-lg text-center">Women & Children Helpline</h3>
+                <p class="text-gray-500 text-sm mb-3">National Helpline</p>
+                <p class="text-4xl font-bold text-pink-600 mb-4">109</p>
+                <div class="flex gap-2 w-full">
+                    <button
+                        class="flex-1 border border-gray-300 px-3 py-2 rounded-lg text-sm hover:bg-gray-50 transition flex items-center justify-center gap-1 copy-btn">
+                        <i class="fa-regular fa-copy"></i> Copy
+                    </button>
+                    <button
+                        class="flex-1 bg-green-500 text-white px-3 py-2 rounded-lg text-sm hover:bg-green-600 transition flex items-center justify-center gap-1 call-btn">
+                        <i class="fa-solid fa-phone"></i> Call
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Call History Sidebar -->
+        <aside class="w-80 bg-white rounded-lg p-4 shadow-sm h-fit">
+            <div class="flex justify-between items-center mb-4">
+                <h3 class="font-bold flex items-center gap-2">
+                    <i class="fa-solid fa-clock-rotate-left"></i> Call History
+                </h3>
+                <button id="clearHistory"
+                    class="bg-green-500 text-white px-3 py-1 text-sm rounded-lg hover:bg-green-600 transition">
+                    Clear
+                </button>
+            </div>
+            <div id="callHistoryList" class="space-y-3 text-sm">
+                <p class="text-gray-500 text-center py-4">No calls made yet</p>
+            </div>
+        </aside>
+    </main>
+
+  
+
+    <!-- Custom Modal -->
+    <div id="callModal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+        <div class="bg-white rounded-lg p-6 max-w-md mx-4">
+            <div class="text-center">
+                <div class="mb-4">
+                    <i class="fa-solid fa-phone text-green-500 text-4xl mb-2"></i>
+                    <h3 class="text-lg font-bold" id="modalServiceName">Service Name</h3>
+                    <p class="text-gray-600" id="modalServiceNumber">Number</p>
+                </div>
+                <p class="text-gray-700 mb-6">
+                    To call this service, <span class="font-bold text-red-600">20 coins</span> will be spent from your
+                    account.
+                </p>
+                <div class="flex gap-3">
+                    <button id="cancelCall"
+                        class="flex-1 border border-gray-300 px-4 py-2 rounded-lg hover:bg-gray-50 transition">
+                        Cancel
+                    </button>
+                    <button id="confirmCall"
+                        class="flex-1 bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition">
+                        Confirm Call
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
